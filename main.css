@@ -104,9 +104,10 @@ nav {
             flex-grow: 1; }
 
 .mission_menu {
-  background-image: url(/rocket.png);
+  background-image: url(rocket.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 100%;
   overflow: hidden;
   min-height: 700px; }
