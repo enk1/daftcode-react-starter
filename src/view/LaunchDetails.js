@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import "./LaunchDetails.sass"
 import { format, toUpper } from "date-fns"
+import Counter from "../components/Counter"
 
 class LaunchDetails extends Component {
     constructor() {
@@ -12,7 +13,10 @@ class LaunchDetails extends Component {
     }
     render() {
         const { launch } = this.props
-        const date = format(launch.launch_date_local, "DD MMMM YYYY")
+        const launchDate = format(launch.launch_date_local, "DD MMMM YYYY")
+        const launchDateUnix = launch.launch_date_unix
+        console.log(launchDateUnix)
+        let todayDateUnix = Math.round(new Date().getTime() / 1000)
 
         return (
             <div className="wrapper">
@@ -26,9 +30,13 @@ class LaunchDetails extends Component {
                 </nav>
                 <section className="mission_info">
                     <div className="half_grid">
-                        <div className="date_launch">{date}</div>
-                        <div className="rocket_name">Rocket name</div>
-                        <div className="counter-rocket">Time to start</div>
+                        <div className="date_launch">{launchDate}</div>
+                        <div className="rocket_name">
+                            {launch.launch_site.site_name}
+                        </div>
+                        <div className="counter-rocket">
+                            <Counter from={todayDateUnix} to={launchDateUnix} />
+                        </div>
                         <div className="rocket_logo">
                             <img src="https://images2.imgbox.com/f3/cd/Ub2z4QHa_o.png" />
                         </div>
