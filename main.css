@@ -1,3 +1,7 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 html {
   font-size: 16px; }
 
@@ -5,7 +9,6 @@ body {
   margin: 0; }
 
 main {
-  width: 100vw;
   background: #fff; }
   main .progressBar {
     background-color: #795548;
@@ -125,6 +128,8 @@ nav {
     border-top: 2px solid #ccac5b; }
 
 .mission_menu {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-image: url(rocket.png);
   background-repeat: no-repeat;
   background-size: cover;
