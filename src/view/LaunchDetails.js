@@ -1,9 +1,19 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import "./LaunchDetails.sass"
+import { format, toUpper } from "date-fns"
 
 class LaunchDetails extends Component {
+    constructor() {
+        super()
+        this.state = {
+            launch: null,
+        }
+    }
     render() {
+        const { launch } = this.props
+        const date = format(launch.launch_date_local, "DD MMMM YYYY")
+
         return (
             <div className="wrapper">
                 <nav>
@@ -16,7 +26,7 @@ class LaunchDetails extends Component {
                 </nav>
                 <section className="mission_info">
                     <div className="half_grid">
-                        <div className="date_launch">07 JULY 2018</div>
+                        <div className="date_launch">{date}</div>
                         <div className="rocket_name">Rocket name</div>
                         <div className="counter-rocket">Time to start</div>
                         <div className="rocket_logo">
