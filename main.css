@@ -1,24 +1,69 @@
-.welcome {
-  color: #0f0f0f;
-  font-size: 3rem;
-  text-align: center;
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg); }
-  .welcome .username {
-    font-weight: normal; }
-
 html {
-  font-size: 10px; }
+  font-size: 50px; }
 
 body {
   margin: 0; }
 
 main {
   width: 80%;
-  margin: 4rem auto 0;
-  padding: 2rem;
+  margin: 1rem auto 0;
+  padding: .5rem;
   border-radius: 1rem;
   background: #d7d7d7; }
+  main .progressBar {
+    background-color: #795548;
+    margin: 1em 0 0 0;
+    border-radius: 1rem;
+    width: 1%;
+    height: 25px; }
+  main .wrap-counter-running {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-radius: .5rem;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s; }
+    main .wrap-counter-running:hover {
+      -webkit-box-shadow: 5px 5px 15px 5px #555;
+              box-shadow: 5px 5px 15px 5px #555;
+      -webkit-transition-timing-function: ease-out;
+           -o-transition-timing-function: ease-out;
+              transition-timing-function: ease-out;
+      -webkit-transition: 0.25s;
+      -o-transition: 0.25s;
+      transition: 0.25s; }
+  main .wrap-counter-stoped {
+    @extends %wrap-counter-running;
+    border-radius: .5rem;
+    background-color: #FF9800;
+    -webkit-box-shadow: 5px 5px 15px 5px #555;
+            box-shadow: 5px 5px 15px 5px #555;
+    -webkit-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s; }
+  main .header, main .counter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%; }
 
 
 /*# sourceMappingURL=main.css.map*/
