@@ -1,11 +1,22 @@
 import { hot } from "react-hot-loader"
 import * as React from "react"
-import Counter from "./components/Counter"
 import "./styles/theme.sass"
+import launch from "./assets/launch.json"
+import launchSite from "./assets/launch_site.json"
+import rocket from "./assets/rocket.json"
+import LaunchDetails from "view/LaunchDetails"
 
 class App extends React.Component {
     render() {
-        return <Counter from={7} to={12} />
+        return (
+            <main>
+                <LaunchDetails
+                    launch={launch}
+                    launchSite={launchSite}
+                    rocket={rocket}
+                />
+            </main>
+        )
     }
 }
 
