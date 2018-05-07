@@ -1,15 +1,12 @@
 html {
-  font-size: 50px; }
+  font-size: 16px; }
 
 body {
   margin: 0; }
 
 main {
-  width: 80%;
-  margin: 1rem auto 0;
-  padding: .5rem;
-  border-radius: 1rem;
-  background: #d7d7d7; }
+  width: 100vw;
+  background: #fff; }
   main .progressBar {
     background-color: #795548;
     margin: 1em 0 0 0;
@@ -64,6 +61,81 @@ main {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%; }
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif; }
+
+nav {
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ccac5b;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  nav .return_arrow {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 0.8rem;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    padding-left: 2rem; }
+  nav .logo_image {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    padding-left: 2rem; }
+    nav .logo_image img {
+      width: 300px; }
+
+.mission_info {
+  padding: 4rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .mission_info .half_grid {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+
+.mission_menu {
+  background-image: url(/rocket.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+  min-height: 700px; }
+  .mission_menu nav {
+    background-color: transparent; }
+
+footer {
+  font-size: .8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3rem 4rem;
+  background: #22272b;
+  color: #666666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  footer div {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  footer .links-media span:after {
+    content: "|";
+    padding-left: .5em; }
+  footer .copyright {
+    text-align: right; }
+  footer a {
+    color: #a5a7ab;
+    text-decoration: none;
+    margin-right: 0.5em; }
 
 
 /*# sourceMappingURL=main.css.map*/
