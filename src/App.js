@@ -7,6 +7,15 @@ import rocket from "./assets/rocket.json"
 import LaunchDetails from "view/LaunchDetails"
 
 class App extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            launch: launch,
+            launchSite: launchSite,
+            rocket: rocket,
+        }
+    }
+
     render() {
         return (
             <main>

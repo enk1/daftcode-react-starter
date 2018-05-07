@@ -3,7 +3,7 @@
     "license": "MIT",
     "name": "daftcode-react-starter",
     "version": "1.0.0",
-    "homepage": "http://enk1.github.io/spacex-launches",
+    "homepage": "https://enk1.github.io/spacex-launches",
     "main": "index.js",
     "scripts": {
         "start": "webpack-dev-server",
