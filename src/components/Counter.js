@@ -34,7 +34,7 @@ class Counter extends Component {
                     this.state.isCounterRunning
                 ) {
                     this.setState({
-                        currentState: this.state.currentState - 1,
+                        currentState: this.state.currentState + 1,
                     })
                 }
             }, 1000)
@@ -48,7 +48,7 @@ class Counter extends Component {
                     this.state.isCounterRunning
                 ) {
                     this.setState({
-                        currentState: this.state.currentState + 1,
+                        currentState: this.state.currentState - 1,
                     })
                 }
             }, 1000)
@@ -57,14 +57,15 @@ class Counter extends Component {
 
     render() {
         const { from, to } = this.props
-        let x =
-            parseInt(this.state.endState) - parseInt(this.state.currentState)
+        let x = Math.abs(
+            parseInt(this.state.currentState) - parseInt(this.state.endState)
+        )
         // console.log(
         //     `${Math.floor(x / (60 * 60 * 24))} days ${Math.floor(
         //         x / (60 * 60)
         //     ) % 24}:${Math.floor((x / 60) % 60)}:${x % 60}`
         // )
-
+        console.log(this.state.currentState)
         return (
             <div
                 className={
