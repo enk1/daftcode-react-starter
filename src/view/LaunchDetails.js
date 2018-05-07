@@ -26,25 +26,30 @@ class LaunchDetails extends Component {
                     <div className="half_grid">
                         <div className="details_launch">
                             <h4>Details</h4>
+                            <hr />
                             <p>lorem ipsum</p>
                         </div>
                         <div className="details_rocket">
-                            <h4>Details</h4>
+                            <h4>Rocket</h4>
+                            <hr />
                             <p>lorem ipsum</p>
                         </div>
                         <div className="launch_pad">
-                            <h4>Details</h4>
+                            <h4>Launch Pad</h4>
+                            <hr />
                             <p>lorem ipsum</p>
                         </div>
                     </div>
                 </section>
                 <section className="mission_menu">
-                    <h3>Mission links</h3>
-                    <nav className="mission_links">
-                        <span>Reddit Campaign</span>
-                        <span>Presskit</span>
-                        <span>Mission video</span>
-                    </nav>
+                    <div className="mission_content">
+                        <h3>Mission links</h3>
+                        <nav className="mission_links">
+                            <a href="#">Reddit Campaign</a>
+                            <a href="#">Presskit</a>
+                            <a href="#">Mission video</a>
+                        </nav>
+                    </div>
                 </section>
                 <footer>
                     <div className="links-media">

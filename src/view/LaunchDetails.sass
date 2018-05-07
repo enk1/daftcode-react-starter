@@ -2,6 +2,7 @@
 	margin: 0
 	padding: 0
 	font-family: Arial, Helvetica, sans-serif
+	box-sizing: border-box
 
 nav
 	background: #000
@@ -27,6 +28,26 @@ nav
 	display: flex
 	.half_grid
 		flex-grow: 1
+	.date_launch
+		text-transform: uppercase
+		letter-spacing: 8px
+		color: #a7a9ac
+		margin-bottom: 2rem
+	.rocket_name
+		text-transform: uppercase
+		font-size: 3.5rem
+	.counter-rocket
+		text-transform: uppercase
+		margin-bottom: 2rem
+
+	h4
+		color: #ccac5b
+		text-transform: uppercase
+		letter-spacing: 8px
+		font-weight: 100
+	hr
+		border: 0
+		border-top: 2px solid #ccac5b
 
 .mission_menu
 	background-image: url('../assets/rocket.png')
@@ -34,12 +55,42 @@ nav
 	background-size: cover
 	background-position: center
 	width: 100%
-	f
 	overflow: hidden
 	min-height: 700px
-	nav
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: flex-end
+	flex-wrap: wrap
+	color: #fff
+	.mission_content
+		width: 100%
+	h3
+		text-align: center
+		color: #fff
+		width: 100%
+		font-size: 2rem
+		text-transform: uppercase
+		letter-spacing: 25px
+		font-weight: 200
+	.mission_links
 		background-color: transparent
-
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		flex-direction: row
+		a
+			color: #fff
+			text-transform: uppercase
+			letter-spacing: 5px
+			margin: 0 1rem
+			padding: 1rem 2rem
+			display: block
+			text-decoration: none
+			font-size: 1rem
+			border: 1px solid #ffffff
+			border-radius: 2em
+			
 footer
 	font-size: .8rem
 	letter-spacing: 2px
