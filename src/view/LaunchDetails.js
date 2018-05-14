@@ -46,9 +46,9 @@ class LaunchDetails extends Component {
                             <hr />
                             <p>{launch.details}</p>
                         </div>
+                        <h4 className="rocket__title">Rocket</h4>
+                        <hr />
                         <div className="rocket__container">
-                            <h4 className="rocket__title">Rocket</h4>
-                            <hr />
                             <div className="rocket__column">
                                 <div className="rocket__item">
                                     <span className="rocket__key">Name:</span>
@@ -119,11 +119,11 @@ class LaunchDetails extends Component {
                                     </span>
                                 </div>
                             </div>
-                            <p>{rocket.description}</p>
                         </div>
-                        <div className="rocket__launchPad">
-                            <h4>Launch Pad</h4>
-                            <hr />
+                        <p>{rocket.description}</p>
+                        <h4>Launch Pad</h4>
+                        <hr />
+                        <div className="rocket__container">
                             <div className="rocket__column">
                                 <div className="rocket__item">
                                     <span className="rocket__key">Name:</span>
@@ -143,8 +143,8 @@ class LaunchDetails extends Component {
                                     </span>
                                 </div>
                             </div>
-                            <p>{launchSite.details}</p>
                         </div>
+                        <p>{launchSite.details}</p>
                     </div>
                 </section>
                 <section className="mission">
