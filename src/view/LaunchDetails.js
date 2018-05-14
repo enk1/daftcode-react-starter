@@ -12,65 +12,151 @@ class LaunchDetails extends Component {
         }
     }
     render() {
-        const { launch } = this.props
+        const { launch, launchSite, rocket } = this.props
         const launchDate = format(launch.launch_date_local, "DD MMMM YYYY")
         const launchDateUnix = launch.launch_date_unix
-        console.log(launchDateUnix)
         let todayDateUnix = Math.round(new Date().getTime() / 1000)
 
         return (
-            <div className="wrapper">
-                <nav>
-                    <div className="return_arrow">&larr; Go back</div>
-                    <div className="logo_image">
+            <div className="launchDetails">
+                <nav className="launchDetails__navigation">
+                    <div className="launchDetails__arrow">&larr; Go back</div>
+                    <div className="launchDetails__logo">
                         <img
                             src={require("../assets/space_x_logo_bw_centered.png")}
                         />
                     </div>
                 </nav>
-                <section className="mission_info">
-                    <div className="half_grid">
-                        <div className="date_launch">{launchDate}</div>
-                        <div className="rocket_name">
+                <section className="launchInfo">
+                    <div className="grid__half">
+                        <div className="rocket__dateLaunch">{launchDate}</div>
+                        <div className="rocket__name">
                             {launch.launch_site.site_name}
                         </div>
-                        <div className="counter-rocket">
+                        <div className="rocket__counter">
                             <Counter from={todayDateUnix} to={launchDateUnix} />
                         </div>
-                        <div className="rocket_logo">
-                            <img src="https://images2.imgbox.com/f3/cd/Ub2z4QHa_o.png" />
+                        <div className="rocket__logo">
+                            <img src={launch.links.mission_patch_small} />
                         </div>
                     </div>
-                    <div className="half_grid">
+                    <div className="grid__half">
                         <div className="details_launch">
                             <h4>Details</h4>
                             <hr />
-                            <p>lorem ipsum</p>
+                            <p>{launch.details}</p>
                         </div>
-                        <div className="details_rocket">
-                            <h4>Rocket</h4>
+                        <div className="rocket__container">
+                            <h4 className="rocket__title">Rocket</h4>
                             <hr />
-                            <p>lorem ipsum</p>
+                            <div className="rocket__column">
+                                <div className="rocket__item">
+                                    <span className="rocket__key">Name:</span>
+                                    <span className="rocket__value">
+                                        {rocket.name}
+                                    </span>
+                                </div>
+                                <div className="rocket__item">
+                                    <span className="rocket__key">
+                                        Company:
+                                    </span>
+                                    <span className="rocket__value">
+                                        {rocket.company}
+                                    </span>
+                                </div>
+                                <div className="rocket__item">
+                                    <span className="rocket__key">Height:</span>
+                                    <span className="rocket__value">
+                                        {rocket.height.meters}
+                                    </span>
+                                </div>
+                                <div className="rocket__item">
+                                    <span className="rocket__key">
+                                        Diameter:
+                                    </span>
+                                    <span className="rocket__value">
+                                        {rocket.diameter.meters}
+                                    </span>
+                                </div>
+                                <div className="rocket__item">
+                                    <span className="rocket__key">Mass:</span>
+                                    <span className="rocket__value">
+                                        {rocket.mass.kg}
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="rocket__column">
+                                <div className="rocket__item">
+                                    <span className="rocket__key">
+                                        First flight:
+                                    </span>
+                                    <span className="rocket__value">
+                                        {rocket.first_flight}
+                                    </span>
+                                </div>
+                                <div className="rocket__item">
+                                    <span className="rocket__key">
+                                        Country:
+                                    </span>
+                                    <span className="rocket__value">
+                                        {rocket.country}
+                                    </span>
+                                </div>
+                                <div className="rocket__item">
+                                    <span className="rocket__key">
+                                        Success rate:
+                                    </span>
+                                    <span className="rocket__value">
+                                        {rocket.success_rate_pct}%
+                                    </span>
+                                </div>
+                                <div className="rocket__item">
+                                    <span className="rocket__key">
+                                        Cost per launch:
+                                    </span>
+                                    <span className="rocket__value">
+                                        ${rocket.cost_per_launch}
+                                    </span>
+                                </div>
+                            </div>
+                            <p>{rocket.description}</p>
                         </div>
-                        <div className="launch_pad">
+                        <div className="rocket__launchPad">
                             <h4>Launch Pad</h4>
                             <hr />
-                            <p>lorem ipsum</p>
+                            <div className="rocket__column">
+                                <div className="rocket__item">
+                                    <span className="rocket__key">Name:</span>
+                                    <span className="rocket__value">
+                                        {launchSite.full_name}
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="rocket__column">
+                                <div className="rocket__item">
+                                    <span className="rocket__key">
+                                        Location:
+                                    </span>
+                                    <span className="rocket__value">
+                                        {launchSite.location.name},{" "}
+                                        {launchSite.location.region}
+                                    </span>
+                                </div>
+                            </div>
+                            <p>{launchSite.details}</p>
                         </div>
                     </div>
                 </section>
-                <section className="mission_menu">
-                    <div className="mission_content">
-                        <h3>Mission links</h3>
-                        <nav className="mission_links">
-                            <a href="#">Reddit Campaign</a>
-                            <a href="#">Presskit</a>
-                            <a href="#">Mission video</a>
-                        </nav>
-                    </div>
+                <section className="mission">
+                    <h3 className="mission__title">Mission links</h3>
+                    <nav className="mission__links">
+                        <a href="#">Reddit Campaign</a>
+                        <a href="#">Presskit</a>
+                        <a href="#">Mission video</a>
+                    </nav>
                 </section>
-                <footer>
-                    <div className="links-media">
+                <footer className="footer">
+                    <div className="media">
                         <span>Follow</span> <a href="#">SpaceX</a>{" "}
                         <a href="#">Twitter</a>
                         <a href="#">Youtube</a> <a href="#">Flickr</a>

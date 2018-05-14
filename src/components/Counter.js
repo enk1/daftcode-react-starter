@@ -60,12 +60,6 @@ class Counter extends Component {
         let x = Math.abs(
             parseInt(this.state.currentState) - parseInt(this.state.endState)
         )
-        // console.log(
-        //     `${Math.floor(x / (60 * 60 * 24))} days ${Math.floor(
-        //         x / (60 * 60)
-        //     ) % 24}:${Math.floor((x / 60) % 60)}:${x % 60}`
-        // )
-        console.log(this.state.currentState)
         return (
             <div
                 className={

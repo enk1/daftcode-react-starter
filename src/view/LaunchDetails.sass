@@ -1,43 +1,45 @@
-.wrapper
+.launchDetails
 	margin: 0
 	padding: 0
 	font-family: Arial, Helvetica, sans-serif
 	box-sizing: border-box
-nav
-	background: #000
-	display: flex
-	color: #ccac5b
-	height: 100px
-	align-items: center
+	.launchDetails__navigation
+		background: #000
+		display: flex
+		color: #ccac5b
+		height: 100px
+		align-items: center
+		.launchDetails__arrow
+			text-transform: uppercase
+			letter-spacing: 8px
+			font-size: 0.8rem
+			flex-grow: 1
+			padding-left: 2rem
+		.launchDetails__logo
+			flex-grow: 2
+			padding-left: 2rem
+			img
+				width: 300px
 
-	.return_arrow
-		text-transform: uppercase
-		letter-spacing: 8px
-		font-size: 0.8rem
-		flex-grow: 1
-		padding-left: 2rem
-	.logo_image
-		flex-grow: 2
-		padding-left: 2rem
-		img
-			width: 300px
-
-.mission_info
+.launchInfo
 	padding: 4rem 2rem
 	display: flex
-	.half_grid
+	.grid__half
 		flex-grow: 1
-	.date_launch
+		width: 50%
+	.rocket__dateLaunch
 		text-transform: uppercase
 		letter-spacing: 8px
 		color: #a7a9ac
 		margin-bottom: 2rem
-	.rocket_name
+	.rocket__name
 		text-transform: uppercase
 		font-size: 3.5rem
-	.counter-rocket
+	.rocket__counter
 		text-transform: uppercase
 		margin-bottom: 2rem
+	.rocket__column
+		display
 
 	h4
 		color: #ccac5b
@@ -48,7 +50,7 @@ nav
 		border: 0
 		border-top: 2px solid #ccac5b
 
-.mission_menu
+.mission
 	box-sizing: border-box
 	background-image: url('../assets/rocket.png')
 	background-repeat: no-repeat
@@ -63,9 +65,7 @@ nav
 	align-items: flex-end
 	flex-wrap: wrap
 	color: #fff
-	.mission_content
-		width: 100%
-	h3
+	.mission__title
 		text-align: center
 		color: #fff
 		width: 100%
@@ -73,7 +73,7 @@ nav
 		text-transform: uppercase
 		letter-spacing: 25px
 		font-weight: 200
-	.mission_links
+	.mission__links
 		background-color: transparent
 		display: flex
 		justify-content: center
@@ -91,7 +91,7 @@ nav
 			border: 1px solid #ffffff
 			border-radius: 2em
 			
-footer
+.footer
 	font-size: .8rem
 	letter-spacing: 2px
 	text-transform: uppercase
@@ -101,7 +101,7 @@ footer
 	display: flex
 	div
 		flex-grow: 1	
-	.links-media span:after 
+	.media span:after 
 		content: "|"
 		padding-left: .5em
 	.copyright
