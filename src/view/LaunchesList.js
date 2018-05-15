@@ -3,6 +3,7 @@ import "./LaunchDetails.sass"
 import { format, toUpper } from "date-fns"
 import "./LaunchesList.sass"
 import Footer from "../components/Footer"
+import Filters from "../components/Filters"
 import LaunchesListItem from "../components/LaunchesListItem"
 
 class LaunchesList extends Component {
@@ -42,14 +43,7 @@ class LaunchesList extends Component {
                         />
                         <figcaption>Launches 2018</figcaption>
                     </figure>
-                    <nav className="launchesList__nav">
-                        <a className="launchesList__button launchesList__button--active">
-                            All rockets
-                        </a>
-                        <a className="launchesList__button">Falcon 9</a>
-                        <a className="launchesList__button">Falcon heavy</a>
-                        <a className="launchesList__button">Dragon</a>
-                    </nav>
+                    <Filters />
                 </header>
                 <main className="launchesList__main">
                     {this.filteredLaunches.map((launch, index) => (
