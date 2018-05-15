@@ -9,8 +9,13 @@ class LaunchesListItem extends Component {
 
     render() {
         const { key, launch } = this.props
+        const date = format(launch.launch_date_local, "DD MMMM YYYY")
 
-        return <div className="launchesList__item">a</div>
+        return (
+            <div className="launchesList__item">
+                <div>{date}</div>
+            </div>
+        )
     }
 }
 

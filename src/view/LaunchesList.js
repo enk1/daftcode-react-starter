@@ -43,12 +43,12 @@ class LaunchesList extends Component {
                         <figcaption>Launches 2018</figcaption>
                     </figure>
                     <nav className="launchesList__nav">
-                        <a clasName="launchesList__button--active">
+                        <a className="launchesList__button--active">
                             All rockets
                         </a>
-                        <a clasName="launchesList__button">Falcon 9</a>
-                        <a clasName="launchesList__button">Falcon heavy</a>
-                        <a clasName="launchesList__button">Dragon</a>
+                        <a className="launchesList__button">Falcon 9</a>
+                        <a className="launchesList__button">Falcon heavy</a>
+                        <a className="launchesList__button">Dragon</a>
                     </nav>
                 </header>
                 <main className="launchesList__main">
@@ -59,7 +59,6 @@ class LaunchesList extends Component {
                             id={index}
                         />
                     ))}
-                    <div className="launchesList__item">a</div>
                 </main>
                 <Footer />
             </div>
