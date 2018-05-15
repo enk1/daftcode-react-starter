@@ -9,7 +9,7 @@ class LaunchesList extends Component {
     constructor() {
         super()
         this.state = {
-            launch: null,
+            rocketNameFilter: null
         }
     }
     get availableRocketNames() {
@@ -43,7 +43,7 @@ class LaunchesList extends Component {
                         <figcaption>Launches 2018</figcaption>
                     </figure>
                     <nav className="launchesList__nav">
-                        <a className="launchesList__button--active">
+                        <a className="launchesList__button launchesList__button--active">
                             All rockets
                         </a>
                         <a className="launchesList__button">Falcon 9</a>
