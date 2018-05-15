@@ -1,9 +1,9 @@
 import React, { Component } from "react"
-import PropTypes from "prop-types"
 import "./LaunchDetails.sass"
 import { format, toUpper } from "date-fns"
 import "./LaunchesList.sass"
 import Footer from "../components/Footer"
+import LaunchesListItem from "../components/LaunchesListItem"
 
 class LaunchesList extends Component {
     constructor() {
@@ -43,13 +43,24 @@ class LaunchesList extends Component {
                         <figcaption>Launches 2018</figcaption>
                     </figure>
                     <nav className="launchesList__nav">
-                        <a href="#">All rockets</a>
-                        <a href="#">Falcon 9</a>
-                        <a href="#">Falcon heavy</a>
-                        <a href="#">Dragon</a>
+                        <a clasName="launchesList__button--active">
+                            All rockets
+                        </a>
+                        <a clasName="launchesList__button">Falcon 9</a>
+                        <a clasName="launchesList__button">Falcon heavy</a>
+                        <a clasName="launchesList__button">Dragon</a>
                     </nav>
                 </header>
-                <main className="launchesList__container">s</main>
+                <main className="launchesList__main">
+                    {this.filteredLaunches.map((launch, index) => (
+                        <LaunchesListItem
+                            launch={launch}
+                            key={launch.flight_number}
+                            id={index}
+                        />
+                    ))}
+                    <div className="launchesList__item">a</div>
+                </main>
                 <Footer />
             </div>
         )
