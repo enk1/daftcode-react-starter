@@ -13,7 +13,9 @@ class LaunchesListItem extends Component {
 
         return (
             <div className="launchesList__item">
-                <div>{date}</div>
+                <span className="launchesList__date">{date}</span>
+                <hr />
+				<span className="launchesList__name">{date}</span>
             </div>
         )
     }

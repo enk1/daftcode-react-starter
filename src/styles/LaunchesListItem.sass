@@ -1,3 +1,23 @@
-.launchesList__item
-	color: #fff
-	margin: 1em
+.launchesList
+	hr
+		width: 100%
+		border: 0
+		border-top: 2px solid #ccac5b
+	&__item
+		color: #fff
+		margin: 1em
+		text-transform: uppercase
+		font-size: 1.1rem
+		letter-spacing: 10px
+		display: flex
+		flex-direction: column
+		width: 48%
+		box-sizing: border-box
+		padding: 1em
+		&:nth-child(even)
+			align-self: flex-start
+			
+		&:nth-child(odd)
+			align-self: flex-end
+	&__date
+		
