@@ -310,11 +310,6 @@ main .header, main .counter {
         -ms-flex-direction: column;
             flex-direction: column; }
 
-.launchesList hr {
-  width: 100%;
-  border: 0;
-  border-top: 2px solid #ccac5b; }
-
 .launchesList__item {
   color: #fff;
   margin: 1em;
@@ -332,12 +327,68 @@ main .header, main .counter {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1em; }
+  .launchesList__item .launchesList__underline {
+    width: 100%;
+    height: 3px;
+    border: none;
+    background: #ccac5b;
+    position: relative;
+    display: block;
+    margin: 1em 0; }
   .launchesList__item:nth-child(even) {
     -ms-flex-item-align: start;
         align-self: flex-start; }
+    .launchesList__item:nth-child(even) .launchesList__underline:after {
+      content: " ";
+      position: absolute;
+      border-style: solid;
+      border-width: 7px 0px 7px 7px;
+      border-color: transparent #ccac5b;
+      display: block;
+      width: 0;
+      z-index: 1;
+      top: -5px;
+      right: -7px; }
   .launchesList__item:nth-child(odd) {
     -ms-flex-item-align: end;
         align-self: flex-end; }
+    .launchesList__item:nth-child(odd) .launchesList__underline:before {
+      border-style: solid;
+      content: " ";
+      position: absolute;
+      border-width: 7px 7px 7px 0px;
+      border-color: transparent #ccac5b;
+      display: block;
+      width: 0;
+      z-index: 1;
+      top: -5px;
+      left: -7px; }
+    .launchesList__item:nth-child(odd) .launchesList__information, .launchesList__item:nth-child(odd) .launchesList__date {
+      -ms-flex-item-align: end;
+          align-self: flex-end; }
+
+.launchesList__information {
+  color: #a7a9ac;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  white-space: nowrap; }
+
+.launchesList__nameValue {
+  color: #fff;
+  margin-left: 5px;
+  margin-right: 5px; }
+
+.launchesList__siteValue {
+  color: #fff;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 280px;
+  margin-left: 5px; }
 
 
 /*# sourceMappingURL=main.css.map*/
