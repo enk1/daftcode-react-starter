@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import "./LaunchDetails.sass"
 import { format, toUpper } from "date-fns"
 import Counter from "../components/Counter"
+import Footer from "../components/Footer"
 
 class LaunchDetails extends Component {
     constructor() {
@@ -155,17 +156,7 @@ class LaunchDetails extends Component {
                         <a href="#">Mission video</a>
                     </nav>
                 </section>
-                <footer className="footer">
-                    <div className="media">
-                        <span>Follow</span> <a href="#">SpaceX</a>{" "}
-                        <a href="#">Twitter</a>
-                        <a href="#">Youtube</a> <a href="#">Flickr</a>
-                        <a href="#">Instagram</a>
-                    </div>
-                    <div className="copyright">
-                        2018 Space Exploration Technologies Corp.
-                    </div>
-                </footer>
+                <Footer />
             </div>
         )
     }

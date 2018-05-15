@@ -1,21 +1,20 @@
 .launchDetails
 	margin: 0
 	padding: 0
-	font-family: Arial, Helvetica, sans-serif
 	box-sizing: border-box
-	.launchDetails__navigation
+	&__navigation
 		background: #000
 		display: flex
 		color: #ccac5b
 		height: 100px
 		align-items: center
-		.launchDetails__arrow
+		&__arrow
 			text-transform: uppercase
 			letter-spacing: 8px
 			font-size: 0.8rem
 			flex-grow: 1
 			padding-left: 2rem
-		.launchDetails__logo
+		&__logo
 			flex-grow: 2
 			padding-left: 2rem
 			img
@@ -88,7 +87,7 @@
 	align-items: flex-end
 	flex-wrap: wrap
 	color: #fff
-	.mission__title
+	&__title
 		text-align: center
 		color: #fff
 		width: 100%
@@ -96,7 +95,7 @@
 		text-transform: uppercase
 		letter-spacing: 25px
 		font-weight: 200
-	.mission__links
+	&__links
 		background-color: transparent
 		display: flex
 		justify-content: center
@@ -115,22 +114,3 @@
 			border: 1px solid #ffffff
 			border-radius: 2em
 			
-.footer
-	font-size: .8rem
-	letter-spacing: 2px
-	text-transform: uppercase
-	padding: 3rem 4rem
-	background: #22272b
-	color: #666666
-	display: flex
-	div
-		flex-grow: 1	
-	.media span:after 
-		content: "|"
-		padding-left: .5em
-	.copyright
-		text-align: right
-	a
-		color: #a5a7ab
-		text-decoration: none
-		margin-right: 0.5em
