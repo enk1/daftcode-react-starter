@@ -36,12 +36,13 @@ class LaunchesList extends Component {
         return (
             <div className="launchesList">
                 <header className="launchesList__header">
-                    <div className="launchesList__logo">
+                    <figure className="launchesList__logo">
                         <img
                             src={require("../assets/space_x_logo_bw_centered.png")}
                         />
-                    </div>
-                    <nav>
+                        <figcaption>Launches 2018</figcaption>
+                    </figure>
+                    <nav className="launchesList__nav">
                         <a href="#">All rockets</a>
                         <a href="#">Falcon 9</a>
                         <a href="#">Falcon heavy</a>
