@@ -1,8 +1,4 @@
 .launchesList
-	hr
-		width: 100%
-		border: 0
-		border-top: 2px solid #ccac5b
 	&__item
 		color: #fff
 		margin: 1em
@@ -14,10 +10,56 @@
 		width: 48%
 		box-sizing: border-box
 		padding: 1em
+		.launchesList__underline
+			width: 100%
+			height: 3px
+			border: none
+			background: #ccac5b
+			position: relative
+			display: block
+			margin: 1em 0
 		&:nth-child(even)
 			align-self: flex-start
-			
+			.launchesList__underline:after
+				content: " "
+				position: absolute
+				border-style: solid
+				border-width: 7px 0px 7px 7px
+				border-color: transparent #ccac5b
+				display: block
+				width: 0
+				z-index: 1
+				top: -5px
+				right: -7px
 		&:nth-child(odd)
 			align-self: flex-end
-	&__date
-		
+			.launchesList__underline:before
+				border-style: solid
+				content: " "
+				position: absolute
+				border-width: 7px 7px 7px 0px
+				border-color: transparent #ccac5b
+				display: block
+				width: 0
+				z-index: 1
+				top: -5px
+				left: -7px
+			.launchesList__information, .launchesList__date
+				align-self: flex-end
+	&__information
+		color: #a7a9ac
+		letter-spacing: 1px
+		display: flex
+		max-width: 100%
+		white-space: nowrap
+	&__nameValue
+		color: #fff
+		margin-left: 5px
+		margin-right: 5px
+	&__siteValue
+		color: #fff
+		text-overflow: ellipsis
+		overflow: hidden
+		white-space: nowrap
+		max-width: 280px
+		margin-left: 5px

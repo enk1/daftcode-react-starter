@@ -13,9 +13,18 @@ class LaunchesListItem extends Component {
 
         return (
             <div className="launchesList__item">
-                <span className="launchesList__date">{date}</span>
-                <hr />
-				<span className="launchesList__name">{date}</span>
+                <div className="launchesList__date">{date}</div>
+                <div className="launchesList__underline"> </div>
+                <div className="launchesList__information">
+                    <span className="launchesList__key">Name: </span>{" "}
+                    <span className="launchesList__nameValue">
+                        {launch.rocket.rocket_name}
+                    </span>
+                    <span className="launchesList__key">| Launch site: </span>{" "}
+                    <span className="launchesList__siteValue">
+                        {launch.launch_site.site_name_long}
+                    </span>
+                </div>
             </div>
         )
     }
