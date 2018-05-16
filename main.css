@@ -24,7 +24,8 @@ body {
     height: 100px;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    cursor: pointer; }
   .launchDetails__arrow {
     text-transform: uppercase;
     letter-spacing: 8px;
@@ -252,23 +253,32 @@ main .header, main .counter {
       font-size: 2rem;
       font-weight: 100;
       letter-spacing: 20px; }
-  .launchesList__nav {
-    margin-top: 50px;
-    background-color: transparent;
+  .launchesList__main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-bottom: 1rem; }
-  .launchesList__button {
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+.filters {
+  margin-top: 50px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 1rem; }
+  .filters__button {
     text-transform: uppercase;
     cursor: pointer;
     color: #a7a9ac;
@@ -283,12 +293,13 @@ main .header, main .counter {
     -webkit-transition: .4s ease-in-out;
     -o-transition: .4s ease-in-out;
     transition: .4s ease-in-out; }
-    .launchesList__button--active {
+    .filters__button--active {
       text-transform: uppercase;
       -webkit-transition: .4s ease-in-out;
       -o-transition: .4s ease-in-out;
       transition: .4s ease-in-out;
       border-radius: 2em;
+        border-radius-letter-spacing: 5px;
       cursor: pointer;
       color: #fff;
       margin: 0 1rem;
@@ -296,19 +307,11 @@ main .header, main .counter {
       border: 1px solid #fff;
       -webkit-box-shadow: inset 0px 0px 10px 2px #fff;
               box-shadow: inset 0px 0px 10px 2px #fff; }
-    .launchesList__button:hover {
+    .filters__button:hover {
       color: #fff;
       border: 1px solid #fff;
       -webkit-box-shadow: inset 0px 0px 10px 2px #fff;
               box-shadow: inset 0px 0px 10px 2px #fff; }
-  .launchesList__main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
 
 .launchesList__item {
   color: #fff;
@@ -326,7 +329,8 @@ main .header, main .counter {
   width: 48%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 1em; }
+  padding: 1em;
+  border: 1px solid transparent; }
   .launchesList__item .launchesList__underline {
     width: 100%;
     height: 3px;
@@ -366,6 +370,11 @@ main .header, main .counter {
     .launchesList__item:nth-child(odd) .launchesList__information, .launchesList__item:nth-child(odd) .launchesList__date {
       -ms-flex-item-align: end;
           align-self: flex-end; }
+  .launchesList__item:hover {
+    cursor: pointer;
+    border: 1px solid #fff;
+    -webkit-box-shadow: inset 0px 0px 10px 2px #fff;
+            box-shadow: inset 0px 0px 10px 2px #fff; }
 
 .launchesList__information {
   color: #a7a9ac;
