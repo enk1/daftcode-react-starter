@@ -4,19 +4,27 @@ import "../styles/Filters.sass"
 class Filters extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            filterType: null,
-        }
     }
+    clearButtonsHighlight() {
+        let buttons = document.querySelectorAll(".filters__button")
+        buttons.forEach(button => (button.className = "filters__button"))
+    }
+    changeRocketFilter(e) {
+        this.clearButtonsHighlight()
+        e.target.className = "filters__button filters__button--active"
+    }
+
     render() {
-        const buttons = this.props.rocketTypes
         return (
             <nav className="filters">
                 <a
-                    className="filters__button filters__button--active"
+                    className="filters__button"
                     key="10"
-                    onClick={e => this.props.onChange("", e)}
-                    id="10"
+                    onClick={e => {
+                        this.props.onChange("", e)
+                        this.changeRocketFilter(e)
+                    }}
+                    id="all"
                 >
                     All rockets
                 </a>
@@ -25,8 +33,11 @@ class Filters extends Component {
                         <a
                             className="filters__button"
                             key={i}
-                            id={i}
-                            onClick={e => this.props.onChange(rocket, e)}
+                            id={rocket}
+                            onClick={e => {
+                                this.props.onChange(rocket, e)
+                                this.changeRocketFilter(e)
+                            }}
                         >
                             {rocket}
                         </a>

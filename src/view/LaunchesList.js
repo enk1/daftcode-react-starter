@@ -34,7 +34,6 @@ class LaunchesList extends Component {
     }
 
     handleFilterChange(value, e) {
-        console.log(value, e)
         this.setState({ rocketNameFilter: value })
     }
     render() {
