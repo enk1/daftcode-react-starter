@@ -374,7 +374,10 @@ main .header, main .counter {
     cursor: pointer;
     border: 1px solid #fff;
     -webkit-box-shadow: inset 0px 0px 10px 2px #fff;
-            box-shadow: inset 0px 0px 10px 2px #fff; }
+            box-shadow: inset 0px 0px 10px 2px #fff;
+    -webkit-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    transition: .4s ease-in-out; }
 
 .launchesList__information {
   color: #a7a9ac;
