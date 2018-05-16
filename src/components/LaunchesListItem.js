@@ -12,7 +12,10 @@ class LaunchesListItem extends Component {
         const date = format(launch.launch_date_local, "DD MMMM YYYY")
 
         return (
-            <div className="launchesList__item">
+            <div
+                className="launchesList__item"
+                onClick={this.props.onLaunchClick}
+            >
                 <div className="launchesList__date">{date}</div>
                 <div className="launchesList__underline"> </div>
                 <div className="launchesList__information">

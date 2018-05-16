@@ -7,16 +7,17 @@ import Filters from "../components/Filters"
 import LaunchesListItem from "../components/LaunchesListItem"
 
 class LaunchesList extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
-            rocketNameFilter: null
+            rocketNameFilter: null,
+            launches: props.launches,
         }
     }
     get availableRocketNames() {
         const { launches } = this.props
-        const rocketNames = []
-
+		const rocketNames = []
+		
         return rocketNames
     }
 
@@ -34,6 +35,7 @@ class LaunchesList extends Component {
         this.setState({ rocketNameFilter: value })
     }
     render() {
+        const { launches } = this.props
         return (
             <div className="launchesList">
                 <header className="launchesList__header">
@@ -46,11 +48,12 @@ class LaunchesList extends Component {
                     <Filters />
                 </header>
                 <main className="launchesList__main">
-                    {this.filteredLaunches.map((launch, index) => (
+                    {this.filteredLaunches.map((launch, id) => (
                         <LaunchesListItem
                             launch={launch}
                             key={launch.flight_number}
-                            id={index}
+                            id={id}
+                            onLaunchClick={this.props.onLaunchClick}
                         />
                     ))}
                 </main>

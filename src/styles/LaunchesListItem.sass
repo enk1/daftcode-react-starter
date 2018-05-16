@@ -10,6 +10,7 @@
 		width: 48%
 		box-sizing: border-box
 		padding: 1em
+		border: 1px solid transparent
 		.launchesList__underline
 			width: 100%
 			height: 3px
@@ -46,6 +47,11 @@
 				left: -7px
 			.launchesList__information, .launchesList__date
 				align-self: flex-end
+		&:hover
+			cursor: pointer
+			border: 1px solid #fff
+			box-shadow: inset 0px 0px 10px 2px #fff
+
 	&__information
 		color: #a7a9ac
 		letter-spacing: 1px

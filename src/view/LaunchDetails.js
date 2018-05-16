@@ -6,8 +6,8 @@ import Counter from "../components/Counter"
 import Footer from "../components/Footer"
 
 class LaunchDetails extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             launch: null,
         }
@@ -20,7 +20,10 @@ class LaunchDetails extends Component {
 
         return (
             <div className="launchDetails">
-                <nav className="launchDetails__navigation">
+                <nav
+                    className="launchDetails__navigation"
+                    onClick={this.props.onBackClick}
+                >
                     <div className="launchDetails__arrow">&larr; Go back</div>
                     <div className="launchDetails__logo">
                         <img
