@@ -16,8 +16,9 @@ class LaunchesList extends Component {
     }
     get availableRocketNames() {
         const { launches } = this.props
-		const rocketNames = []
-		
+		let rocketNames = launches.map(launch => launch.rocket.rocket_name)
+		rocketNames = [...new Set(rocketNames)]
+
         return rocketNames
     }
 
@@ -45,7 +46,7 @@ class LaunchesList extends Component {
                         />
                         <figcaption>Launches 2018</figcaption>
                     </figure>
-                    <Filters />
+                    <Filters rocketTypes={this.availableRocketNames} />
                 </header>
                 <main className="launchesList__main">
                     {this.filteredLaunches.map((launch, id) => (

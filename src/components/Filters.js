@@ -2,21 +2,26 @@ import React, { Component } from "react"
 import "../styles/Filters.sass"
 
 class Filters extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
-            launch: null,
+            filterType: null,
         }
     }
     render() {
+        const buttons = this.props.rocketTypes
         return (
             <nav className="filters">
                 <a className="filters__button filters__button--active">
                     All rockets
                 </a>
-                <a className="filters__button">Falcon 9</a>
-                <a className="filters__button">Falcon heavy</a>
-                <a className="filters__button">Dragon</a>
+                {this.props.rocketTypes.map((rocket, i) => {
+                    return (
+                        <a className="filters__button" key={i} id={i}>
+                            {rocket}
+                        </a>
+                    )
+                })}
             </nav>
         )
     }
