@@ -370,8 +370,8 @@ main .header, main .counter {
       color: #666;
       display: block;
       z-index: 1;
-      top: -8px;
-      right: -58px; }
+      top: -9px;
+      left: 103.8%; }
   .launchesList__item:nth-child(odd) {
     -ms-flex-item-align: end;
         align-self: flex-end; }
@@ -392,8 +392,8 @@ main .header, main .counter {
       color: #666;
       display: block;
       z-index: 1;
-      top: -7px;
-      left: -49px; }
+      top: -9px;
+      right: 102.9%; }
     .launchesList__item:nth-child(odd) .launchesList__information, .launchesList__item:nth-child(odd) .launchesList__date {
       -ms-flex-item-align: end;
           align-self: flex-end; }
