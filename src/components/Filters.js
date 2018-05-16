@@ -18,7 +18,7 @@ class Filters extends Component {
         return (
             <nav className="filters">
                 <a
-                    className="filters__button"
+                    className="filters__button filters__button--active"
                     key="10"
                     onClick={e => {
                         this.props.onChange("", e)
