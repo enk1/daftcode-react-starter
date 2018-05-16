@@ -13,11 +13,12 @@ class LaunchesList extends Component {
             rocketNameFilter: null,
             launches: props.launches,
         }
+        this.handleFilterChange = this.handleFilterChange.bind(this)
     }
     get availableRocketNames() {
         const { launches } = this.props
-		let rocketNames = launches.map(launch => launch.rocket.rocket_name)
-		rocketNames = [...new Set(rocketNames)]
+        let rocketNames = launches.map(launch => launch.rocket.rocket_name)
+        rocketNames = [...new Set(rocketNames)]
 
         return rocketNames
     }
@@ -32,7 +33,8 @@ class LaunchesList extends Component {
         )
     }
 
-    handleFilterChange(value) {
+    handleFilterChange(value, e) {
+        console.log(value, e)
         this.setState({ rocketNameFilter: value })
     }
     render() {
@@ -46,7 +48,10 @@ class LaunchesList extends Component {
                         />
                         <figcaption>Launches 2018</figcaption>
                     </figure>
-                    <Filters rocketTypes={this.availableRocketNames} />
+                    <Filters
+                        rocketTypes={this.availableRocketNames}
+                        onChange={this.handleFilterChange}
+                    />
                 </header>
                 <main className="launchesList__main">
                     {this.filteredLaunches.map((launch, id) => (
