@@ -8,11 +8,9 @@ import launchSite from "./assets/launch_site.json"
 import rocket from "./assets/rocket.json"
 import LaunchDetails from "view/LaunchDetails"
 
-//import launches from "./assets/launches.json"
 import LaunchesList from "view/LaunchesList"
 
 class App extends React.Component {
-    // eslint-disable-line react/prefer-stateless-function
     constructor(props) {
         super(props)
         this.state = {
@@ -30,7 +28,6 @@ class App extends React.Component {
             case "list":
                 return (
                     <LaunchesList
-                        // launches={launches}
                         onLaunchClick={this.handleLaunchClick}
                     />
                 )

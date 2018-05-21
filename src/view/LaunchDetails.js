@@ -6,6 +6,15 @@ import Counter from "../components/Counter"
 import Footer from "../components/Footer"
 
 class LaunchDetails extends Component {
+
+	async componentDidMount() {
+        const url = "https://api.spacexdata.com/v2/launches/all"
+        const launches = await fetch(url).then(res => res.json())
+        this.setState({
+            launches,
+        })
+	}
+	
     constructor(props) {
         super(props)
         this.state = {
