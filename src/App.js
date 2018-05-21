@@ -1,3 +1,4 @@
+import "babel-polyfill"
 import { hot } from "react-hot-loader"
 import * as React from "react"
 import "./styles/theme.sass"

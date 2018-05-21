@@ -18,12 +18,12 @@ class LaunchesList extends Component {
         super()
         this.state = {
             rocketNameFilter: null,
-            launches: {},
+            launches: [],
         }
         this.handleFilterChange = this.handleFilterChange.bind(this)
     }
     get availableRocketNames() {
-        const { launches } = this.props
+        const { launches } = this.state
         let rocketNames = launches.map(launch => launch.rocket.rocket_name)
         rocketNames = [...new Set(rocketNames)]
 
@@ -31,8 +31,7 @@ class LaunchesList extends Component {
     }
 
     get filteredLaunches() {
-        const { rocketNameFilter } = this.state
-        const { launches } = this.props
+        const { rocketNameFilter, launches } = this.state
         if (!rocketNameFilter) return launches
 
         return launches.filter(
