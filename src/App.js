@@ -7,7 +7,7 @@ import launchSite from "./assets/launch_site.json"
 import rocket from "./assets/rocket.json"
 import LaunchDetails from "view/LaunchDetails"
 
-import launches from "./assets/launches.json"
+//import launches from "./assets/launches.json"
 import LaunchesList from "view/LaunchesList"
 
 class App extends React.Component {
@@ -29,7 +29,7 @@ class App extends React.Component {
             case "list":
                 return (
                     <LaunchesList
-                        launches={launches}
+                        // launches={launches}
                         onLaunchClick={this.handleLaunchClick}
                     />
                 )

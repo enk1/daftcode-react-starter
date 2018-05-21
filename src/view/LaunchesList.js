@@ -7,11 +7,18 @@ import Filters from "../components/Filters"
 import LaunchesListItem from "../components/LaunchesListItem"
 
 class LaunchesList extends Component {
-    constructor(props) {
-        super(props)
+    async componentDidMount() {
+        const url = "https://api.spacexdata.com/v2/launches/all"
+        const launches = await fetch(url).then(res => res.json())
+        this.setState({
+            launches,
+        })
+    }
+    constructor() {
+        super()
         this.state = {
             rocketNameFilter: null,
-            launches: props.launches,
+            launches: {},
         }
         this.handleFilterChange = this.handleFilterChange.bind(this)
     }
