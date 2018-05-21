@@ -26,29 +26,28 @@ class App extends React.Component {
 
         switch (viewName) {
             case "list":
-                return (
-                    <LaunchesList
-                        onLaunchClick={this.handleLaunchClick}
-                    />
-                )
+                return <LaunchesList onLaunchClick={this.handleLaunchClick} />
 
             case "details":
                 return (
                     <LaunchDetails
-                        launch={launch}
-                        launchSite={launchSite}
-                        rocket={rocket}
+                        launch={this.state.viewName}
                         onBackClick={this.handleBackClick}
                     />
                 )
 
             default:
-                return null
+                return (
+                    <LaunchDetails
+                        launch={this.state.viewName}
+                        onBackClick={this.handleBackClick}
+                    />
+                )
         }
     }
 
-    handleLaunchClick() {
-        this.setState({ viewName: "details" })
+    handleLaunchClick(flight_number) {
+        this.setState({ viewName: flight_number })
     }
 
     handleBackClick() {

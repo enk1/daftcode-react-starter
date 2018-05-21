@@ -14,7 +14,7 @@ class LaunchesListItem extends Component {
         return (
             <div
                 className="launchesList__item"
-                onClick={this.props.onLaunchClick}
+                onClick={this.props.onLaunchClick(key)}
             >
                 <div className="launchesList__date">{date}</div>
                 <div className="launchesList__underline"> </div>

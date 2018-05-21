@@ -43,7 +43,7 @@ class LaunchesList extends Component {
         this.setState({ rocketNameFilter: value })
     }
     render() {
-        const { launches } = this.state
+        //const { launches } = this.state
         return (
             <div className="launchesList">
                 <header className="launchesList__header">
@@ -61,12 +61,11 @@ class LaunchesList extends Component {
                 <main className="launchesList__main">
                     {this.filteredLaunches.map((launch, id) => (
                         <LaunchesListItem
-							value={launches.flight_number}
-							//przekazać launchData wybranego flight_number
+                            //value={launch}
+                            //przekazać launchData wybranego flight_number
                             launch={launch}
                             key={launch.flight_number}
-                            id={id}
-                            onLaunchClick={this.props.onLaunchClick}
+                            onLaunchClick={this.props.onLaunchClick(id)}
                         />
                     ))}
                 </main>
